@@ -11,9 +11,21 @@ def filter_word(word, spam_dict, ham_dict):
     hams = ham_dict.get(word, 0) + 1
     return float(spams)/ (spams + hams)
 
-def filte(doc, spam_dict, ham_dict):
-    words = words.split(" ")
+def filter(words, spam_dict, ham_dict):
+   words = doc.split(" ")
    set_words = set(words)
    probs = [filter_word(word, spam_dict, ham_dict) for word in set_words]
-   prob = sum(probs)/(sum(probs)+sum([1~prob in probs])
+   prob = sum(probs)/(sum(probs)+sum([1-p for p in probs])
    return prob 
+
+def classify_doc(doc, spam_dict={}, ham_dict={}):
+    words = doc.split(" ")
+    words = [word for word in words if word]
+    set_words = set(words)
+    for word in set_words:
+        spam_dict, ham_dict = classify_word(word, spam, spam_dict, ham_dict)
+    return spam_dict, ham_dict
+
+                  
+                    
+
