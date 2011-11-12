@@ -27,5 +27,5 @@ def classify_doc(doc,spam, spam_dict={}, ham_dict={}):
     return spam_dict, ham_dict
 
                   
-                    
+
 
