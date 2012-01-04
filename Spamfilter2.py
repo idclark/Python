@@ -37,7 +37,7 @@ class Spamfileter(object):
 
         pickle.dump((self.good, self.bad),filename, pickle.HIGHEST_PROTOCOL)
 
-    def spam(sefl, doc):
+    def spam(self, doc):
         """ Trains the spam filter using words in the doc string."""
         self.train_document(doc, self.bad)
 
