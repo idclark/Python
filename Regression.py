@@ -31,5 +31,5 @@ class Regression:
         self.t = self.coef / self.se
         #calculate t-score
 
-        
+        print self.coef, self.se, self.t 
             
