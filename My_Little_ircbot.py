@@ -1,4 +1,4 @@
-import sys socket string
+import sys ,socket ,string
 
 HOST = 'irc.freenode.net'
 PORT = 6667
@@ -22,7 +22,7 @@ while 1:
     tmp = string.split(readbuffer, '\n')
     readbuffer = tmp.pop( )
 
-    for line in temp:
+    for line in tmp:
         line = string.rstrip(line)
         line = string.split(line)
 
