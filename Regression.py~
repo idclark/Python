@@ -1,0 +1,14 @@
+import numpy as np
+import scipy
+
+#need to create a y vector and x matrix
+
+class Regression:
+        
+    def __init__ (self, y, x)
+
+    def ols(self, x, y):
+            y = scipy.array
+            x = scipy.arra
+
+            coef = 
