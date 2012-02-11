@@ -7,18 +7,18 @@ from scipy.linalg import qr, inv,solve, det
 
 class Regression:
 
-"""
-Adapted from Vincent Nijs' 2007 script.
+    """
+    Adapted from Vincent Nijs' 2007 script.
 
-script for calculating OLS regression. I'd like to eventually add more methods for logit and probit regressions.
+    script for calculating OLS regression. I'd like to eventually add more m    ethods for logit and probit regressions.
+    
+    uses a DV y and matrix of predictors x - intercept is added automatically.
 
-uses a DV y and matrix of predictors x - intercept is added automatically.
-
-use the summary method to print coef and se estimates.
+    use the summary method to print coef and se estimates.
 
 
-"""
-    def __init__ (self, y, x, y_varname="y", xvarname = " "):
+    """
+    def __init__ (self, y, x, y_varname="y", x_varname = ''):
         self.y = y
         self.x = c_[ones(x.shape[0]),x]
 
@@ -50,8 +50,7 @@ use the summary method to print coef and se estimates.
     def summary(self):
         print 'Variable Coefficient   std. error   t-stat'
         for i in range(len(self.x_varname)):
-            print ''' %-5s       %-5.6f     %5.6f     %-5.6f'''
-            %tuple([self.x_varname[i], self.coef[i], self.se[i], self.t[i]])
+            print ''' %-5s       %-5.6f     %5.6f     %-5.6f''' %tuple([self.x_varname[i], self.coef[i], self.se[i], self.t[i]])
 
             
     
